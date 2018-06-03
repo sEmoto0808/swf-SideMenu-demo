@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vKG-uo-xDR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SideMenuViewController-->
+        <scene sceneID="ISD-5y-Vkk">
+            <objects>
+                <viewController storyboardIdentifier="SideMenuViewController" title="SideMenuViewController" id="vKG-uo-xDR" customClass="SideMenuViewController" customModule="swf_SideMenu_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G4b-Pp-kIg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YMy-IA-dT9">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.35520964040000003" green="0.66080655489999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SideMenuCell" rowHeight="128" id="c67-CQ-V6I" customClass="SideMenuCell" customModule="swf_SideMenu_demo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c67-CQ-V6I" id="rFl-Hj-6JW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="127.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdb-mQ-Dmk">
+                                                    <rect key="frame" x="15" y="11" width="345" height="106"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="cdb-mQ-Dmk" secondAttribute="bottom" id="4mk-82-p8A"/>
+                                                <constraint firstItem="cdb-mQ-Dmk" firstAttribute="leading" secondItem="rFl-Hj-6JW" secondAttribute="leadingMargin" id="5bb-Qv-A1H"/>
+                                                <constraint firstItem="cdb-mQ-Dmk" firstAttribute="top" secondItem="rFl-Hj-6JW" secondAttribute="topMargin" id="9Cs-4d-r3A"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="cdb-mQ-Dmk" secondAttribute="trailing" id="whb-DB-VMW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="sideMenuTitle" destination="cdb-mQ-Dmk" id="Pt6-cX-dlg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="vKG-uo-xDR" id="1PX-nO-e85"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="YMy-IA-dT9" firstAttribute="trailing" secondItem="Gob-MU-ORh" secondAttribute="trailing" id="Cb6-1r-W4q"/>
+                            <constraint firstItem="YMy-IA-dT9" firstAttribute="leading" secondItem="Gob-MU-ORh" secondAttribute="leading" id="d9x-67-OXC"/>
+                            <constraint firstItem="YMy-IA-dT9" firstAttribute="top" secondItem="Gob-MU-ORh" secondAttribute="top" id="ubA-sp-jjm"/>
+                            <constraint firstItem="YMy-IA-dT9" firstAttribute="bottom" secondItem="Gob-MU-ORh" secondAttribute="bottom" id="uhg-iE-mNu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gob-MU-ORh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cOD-Yd-RvL"/>
+                    <connections>
+                        <outlet property="sideTableView" destination="YMy-IA-dT9" id="5ow-fy-PDx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mXD-zM-liz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064.8" y="142.57871064467767"/>
+        </scene>
+    </scenes>
+</document>
